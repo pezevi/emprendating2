@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @idea_like.idea %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @idea_like.user %>
+</p>
+
+<p>
+  <strong>Liked:</strong>
+  <%= @idea_like.liked %>
+</p>
+
+<%= link_to 'Edit', edit_idea_like_path(@idea_like) %> |
+<%= link_to 'Back', idea_likes_path %>

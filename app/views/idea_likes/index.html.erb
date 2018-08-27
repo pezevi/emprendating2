@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Idea Likes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idea</th>
+      <th>User</th>
+      <th>Liked</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idea_likes.each do |idea_like| %>
+      <tr>
+        <td><%= idea_like.idea.name %></td>
+        <td><%= idea_like.user.name %></td>
+        <td><%= idea_like.liked %></td>
+        <td><%= link_to 'Show', idea_like %></td>
+        <td><%= link_to 'Edit', edit_idea_like_path(idea_like) %></td>
+        <td><%= link_to 'Destroy', idea_like, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idea Like', new_idea_like_path %>

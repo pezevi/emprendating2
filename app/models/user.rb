@@ -1,0 +1,9 @@
+class User < ApplicationRecord
+  # has_many :ideas
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+  has_many :ideas, dependent: :destroy
+  has_many :idea_likes, dependent: :destroy
+end

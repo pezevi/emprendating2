@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @idea.short_description %>
+</p>
+
+<p>
+  <strong>Long description:</strong>
+  <%= @idea.long_description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @idea.category %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @idea.phase %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag @idea.picture.thumb %>
+</p>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
+
+<%= link_to 'LIKE?', new_idea_idea_like_path(@idea) %>
